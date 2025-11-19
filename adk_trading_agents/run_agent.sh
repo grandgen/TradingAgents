@@ -1,3 +1,3 @@
 #!/bin/bash
 export $(cat .env | xargs)
-python3 -m adk run . --replay replay_team.json
+/home/jules/.pyenv/versions/3.10.19/bin/adk run . --replay replay_team.json
