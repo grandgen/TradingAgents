@@ -1,4 +1,5 @@
 # adk_trading_agents/agent.py
+import logging
 from google.adk.agents import SequentialAgent, ParallelAgent
 from adk_trading_agents.agents.fundamentals_analyst import fundamentals_analyst
 from adk_trading_agents.agents.bull_researcher import bull_researcher
@@ -11,6 +12,12 @@ from adk_trading_agents.agents.risk_manager import risk_manager
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
+
+# Configure logging for verbose output
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s'
+)
 
 load_dotenv()
 
